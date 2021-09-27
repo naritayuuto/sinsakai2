@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class TimeCount : MonoBehaviour
 {
 	[SerializeField] string m_sceneNameToBeLoaded = "SceneNameToBeLoaded";
-	private float time = 60;
+	private float time = 90;
 	void Start()
 	{
 		

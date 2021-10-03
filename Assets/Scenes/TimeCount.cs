@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class TimeCount : MonoBehaviour
 {
 	[SerializeField] string m_sceneNameToBeLoaded = "SceneNameToBeLoaded";
-	private float time = 90;
+	public float time = 180;
 	void Start()
 	{
 		
@@ -23,7 +23,9 @@ public class TimeCount : MonoBehaviour
 		time -= Time.deltaTime;
 		//マイナスは表示しない
 		if (time < 0) time = 0;
-		GetComponent<Text>().text = ((int)time).ToString();
+		{
+			GetComponent<Text>().text = ((int)time).ToString();
+		}
 		if (time < 30)
 		{
 			text.color = new Color(1.0f, 0.0f, 0.0f, 1.0f);

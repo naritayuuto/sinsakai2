@@ -76,6 +76,14 @@ public class Hero : MonoBehaviour
         {
             SceneManager.LoadScene("end");
         }
+        if(collision.gameObject.tag == "shoes")
+        {
+            m_walkSpeed = m_walkSpeed * 1.1f;
+        }
+        if(collision.gameObject.tag == "Item")
+        {
+            m_walkSpeed = m_walkSpeed * 0.95f;
+        }
     }
     /// <summary>
     /// 入力と直前に移動した方向に応じてアニメーションを制御する

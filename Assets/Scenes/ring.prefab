@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3328246466362175390}
   - component: {fileID: 8954960176139100649}
   - component: {fileID: 1757043262089253508}
+  - component: {fileID: 2307395672290092010}
   m_Layer: 0
   m_Name: ring
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,4 +96,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb327913e590e443ae5a41c977610a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Get: {fileID: 0}
+  Get: {fileID: 8300000, guid: 40dff4d95648d8649b2eeb4ca174b016, type: 3}
+--- !u!61 &2307395672290092010
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575470485822616246}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.24, y: 2.49}
+    newSize: {x: 3.24, y: 2.49}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.24, y: 2.49}
+  m_EdgeRadius: 0

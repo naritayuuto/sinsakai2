@@ -78,7 +78,7 @@ public class Hero : MonoBehaviour
         }
         if(collision.gameObject.tag == "shoes")
         {
-            m_walkSpeed = m_walkSpeed * 1.1f;
+            m_walkSpeed = m_walkSpeed * 1.2f;
         }
         if(collision.gameObject.tag == "Item")
         {

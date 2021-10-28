@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;      // UI を操作するために追加している
 using UnityEngine.SceneManagement;  // シーン遷移を行うために追加している
+using DG.Tweening;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -18,23 +19,14 @@ public class SceneLoader : MonoBehaviour
 
     void Update()
     {
-        // ロードが開始されたら
         if (m_isLoadStarted)
         {
             // m_panel が設定されていたら、徐々にアルファを上げて不透明にする
             if (m_fadePanel)
             {
-                Color panelColor = m_fadePanel.color;
-                panelColor.a += (m_fadeSpeed + Speed ) * Time.deltaTime;
-                m_fadePanel.color = panelColor;
-
-                // ほぼ不透明になったら
-                if (panelColor.a > 0.99f)
-                {
-                    // シーンをロードする
-                    SceneManager.LoadScene(m_sceneNameToBeLoaded);
-                    m_isLoadStarted = false;
-                }
+                m_fadePanel.DOColor(Color.black, m_fadeSpeed).OnComplete(() => SceneManager.LoadScene(m_sceneNameToBeLoaded));
+                m_isLoadStarted = false;
+                Debug.Log("scene移動完了");
             }
             else
             {
